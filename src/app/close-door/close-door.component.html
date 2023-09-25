@@ -1,0 +1,7 @@
+<div class="close-door">
+    <h2>Close Door</h2>
+    <label for="quantity">Select Quantity:</label>
+    <input type="number" id="quantity" [(ngModel)]="selectedQuantity" min="1" />
+    <button (click)="closeDoor()">Buy</button>
+    <p>{{ getPurchaseResult() }}</p>
+</div>

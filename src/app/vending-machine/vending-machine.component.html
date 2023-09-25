@@ -1,0 +1,21 @@
+<div class="vending-machine">
+    <h2>Vending Machine</h2>
+  
+    <div class="product-list">
+      <div *ngFor="let product of products" class="product">
+        <p>{{product.id}}</p>
+        <p>{{ product.name }}</p>
+        <p>Price: ₹{{ product.price }}</p>
+        <p>Quantity: {{ product.quantity }}</p>
+      </div>
+    </div>
+  
+    <div class="purchase-product">
+        <h2>Purchase Product</h2>
+        <label for="productId">Select Product:</label>
+        <input type="number" id="quantity" [(ngModel)]="selectedProductId" min="1" />
+        <button (click)="purchaseProduct()">Open Door</button>
+      </div>
+
+  </div>
+  
