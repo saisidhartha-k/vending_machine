@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class VendingMachineComponent {
   public products: Product[] = [];
   purchaseResult: string = '';
-  selectedProductId: number | null = null; 
+  selectedSectionId: number | null = null; 
   selectedProduct: Product | null = null; 
 
   constructor( public vendingMachine : VendingMachineService, private router: Router) {}
@@ -22,8 +22,8 @@ export class VendingMachineComponent {
 
 
   purchaseProduct(): void {
-    if (this.selectedProductId !== null) {
-      this.vendingMachine.purchaseProduct(this.selectedProductId);
+    if (this.selectedSectionId !== null) {
+      this.vendingMachine.purchaseProduct(this.selectedSectionId);
     }
     this.router.navigate(['/closeDoor']);
 
